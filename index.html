@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-   <div id="main">
-    <div id="nav">
-       <h3> <span>Baking</span>Recipe</h3>
-       <div id="links"></div>
-       <a href="">Home</a><a href="">Pricing</a><a href="">Menu</a><a href="">Contact us</a>
-    </div>
-    <div id="heading">
-        <h1>Delivering Your Favourites!</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quia iste perferendis placeat sunt facere excepturi sint minima voluptatibus dicta? Officiis, magnam suscipit dolor consectetur minus ducimus distinctio nisi blanditiis repellat facilis error quidem deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium adipisci dignissimos ducimus labore numquam porro magni iure, distinctio eius velit optio alias impedit aliquam eveniet! Aut! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quod corrupti explicabo culpa dolorem? Blanditiis error vero illo totam perferendis earum voluptatibus tenetur veniam deserunt fuga omnis repellendus rem impedit dicta eum eveniet, nam dolorum est repudiandae! Deleniti nam minus ratione inventore fuga, hic repudiandae, porro, maiores atque dignissimos nisi.</p>
-        <button>Order Now</button>
-    </div>
-    <div id="pic">
-        <img src="pexels-anna-tukhfatullina-food-photographerstylist-2638026.jpg" alt="">
-
-    </div>
-    <div id="details">
-        <div id="dleft">
-            <h1> Customize your cakes Now </h1>
-            <div id="smline">
-                <button>click here</button>
-            </div>
-        </div>
-        <div id="dright">
-            <div id="feat">
-                <div id="fdets">
-                    <h3> About Us </h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate magni non est modi perferendis quibusdam molestiae ipsa? Et repellat facere pariatur est alias! Dignissimos doloremque expedita aut id molestiae ipsum eius veritatis cum enim officia? Dolorem.</p>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display">
                 </div>
-                
-            </div>
+                <div>
+                    <input type="button" value="AC" onclick="display.value =''">
+                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice (0,-1)">
+                    <input type="button" value="." onclick="display.value ='.'">
+                    <input type="button" value="/" onclick="display.value ='/'">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value +='7'">
+                    <input type="button" value="8" onclick="display.value +='8'">
+                    <input type="button" value="9" onclick="display.value +='9'">
+                    <input type="button" value="*" onclick="display.value +='*'">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value +='4'">
+                    <input type="button" value="5" onclick="display.value +='5'">
+                    <input type="button" value="6" onclick="display.value +='6'">
+                    <input type="button" value="-" onclick="display.value +='-'">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value +='1'">
+                    <input type="button" value="2" onclick="display.value +='2'">
+                    <input type="button" value="3" onclick="display.value +='3'">
+                    <input type="button" value="+" onclick="display.value +='+'">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="display.value +='00'">
+                    <input type="button" value="0" onclick="display.value +='0'">
+                    <input type="button" value="=" onclick = "display.value = eval(display.value)" class ="equal" >
+                    
+                </div>
+            </form>
         </div>
     </div>
-   </div>
 </body>
+
 </html>
+
+
+
+
